@@ -80,15 +80,15 @@ A brand-new textdraw-based login interface replaces old dialogs:
 
 ### 🔐 Login System
 
-![Login Error](assets/loginerror.png)  
-![Login Screen](/newdawn-devlog/assets/login.png)  
-![Login Dialog](/newdawn-devlog/assets/logindialog.png)  
-![Missing Input](/newdawn-devlog/assets/loginnoinput.png)  
-![Missing Password](/newdawn-devlog/assets/loginnopassword.png)  
+![Login Error](/assets/loginerror.png)  
+![Login Screen](/assets/login.png)  
+![Login Dialog](/assets/logindialog.png)  
+![Missing Input](/assets/loginnoinput.png)  
+![Missing Password](/assets/loginnopassword.png)  
 
 ---
 
 ### ⚔️ Clanwar Setup
 
-![No Clanwar](/newdawn-devlog/assets/nocw.png)  
-![Setup Clanwar](/newdawn-devlog/assets/setupcw.png)
+![No Clanwar](/assets/nocw.png)  
+![Setup Clanwar](/assets/setupcw.png)
