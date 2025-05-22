@@ -80,7 +80,7 @@ A brand-new textdraw-based login interface replaces old dialogs:
 
 ### 🔐 Login System
 
-![Login Error](/newdawn-devlog/assets/loginerror.png)  
+![Login Error](assets/loginerror.png)  
 ![Login Screen](/newdawn-devlog/assets/login.png)  
 ![Login Dialog](/newdawn-devlog/assets/logindialog.png)  
 ![Missing Input](/newdawn-devlog/assets/loginnoinput.png)  
