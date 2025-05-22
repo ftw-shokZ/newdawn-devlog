@@ -6,3 +6,9 @@ theme: minima
 
 include:
   - assets
+
+  defaults:
+  - scope:
+      path: ""
+    values:
+      css: "/newdawn-devlog/assets/css/custom.css"
