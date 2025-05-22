@@ -29,18 +29,17 @@
       <div class="wrapper">
         {% if page.url == "/" %}
           <h2 class="post-list-heading">Posts</h2>
-          <ul class="post-list">
+          <div class="post-cards">
             {% for post in site.posts %}
-              <li>
-                <span class="post-meta">{{ post.date | date: "%B %d, %Y" }}</span>
-                <h3>
-                  <a class="post-link" href="{{ post.url | relative_url }}">
-                    {{ post.title }}
-                  </a>
-                </h3>
-              </li>
+              <div class="post-card">
+                <a class="post-card-link" href="{{ post.url | relative_url }}">
+                  <h3 class="post-card-title">{{ post.title }}</h3>
+                  <p class="post-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                </a>
+              </div>
             {% endfor %}
-          </ul>
+          </div>
+          
         {% else %}
           {{ content }}
         {% endif %}
