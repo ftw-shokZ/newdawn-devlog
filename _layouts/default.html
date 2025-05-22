@@ -1,1 +1,41 @@
-<link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Jekyll SEO -->
+    {% seo %}
+
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="{{ "/favicon.ico" | relative_url }}">
+
+    <!-- Minima core styles -->
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="wrapper">
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </div>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <h2 class="footer-heading">{{ site.title }}</h2>
+        <p>{{ site.description }}</p>
+      </div>
+    </footer>
+  </body>
+</html>
