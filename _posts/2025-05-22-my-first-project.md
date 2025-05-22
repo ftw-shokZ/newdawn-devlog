@@ -81,14 +81,14 @@ A brand-new textdraw-based login interface replaces old dialogs:
 ### 🔐 Login System
 
 ![Login Error](https://ftw-shokz.github.io/newdawn-devlog/assets/loginerror.png)
-![Login Screen](/assets/login.png)  
-![Login Dialog](/assets/logindialog.png)  
-![Missing Input](/assets/loginnoinput.png)  
-![Missing Password](/assets/loginnopassword.png)  
+![Login Screen](https://ftw-shokz.github.io/newdawn-devlog/assets/login.png)  
+![Login Dialog](https://ftw-shokz.github.io/newdawn-devlog/assets/logindialog.png)  
+![Missing Input](https://ftw-shokz.github.io/newdawn-devlog/assets/loginnoinput.png)  
+![Missing Password](https://ftw-shokz.github.io/newdawn-devlog/assets/loginnopassword.png)  
 
 ---
 
 ### ⚔️ Clanwar Setup
 
-![No Clanwar](/assets/nocw.png)  
-![Setup Clanwar](/assets/setupcw.png)
+![No Clanwar](https://ftw-shokz.github.io/newdawn-devlog/assets/nocw.png)  
+![Setup Clanwar](https://ftw-shokz.github.io/newdawn-devlog/assets/setupcw.png)
