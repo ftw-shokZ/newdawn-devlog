@@ -88,3 +88,12 @@ img {
   font-size: 0.9rem;
   color: #bbbbbb;
 }
+
+.post-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 8px rgba(34, 165, 221, 0.3);
+}

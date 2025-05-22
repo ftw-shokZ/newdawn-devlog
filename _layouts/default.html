@@ -33,6 +33,9 @@
             {% for post in site.posts %}
               <div class="post-card">
                 <a class="post-card-link" href="{{ post.url | relative_url }}">
+                  {% if post.thumbnail %}
+                  <img class="post-thumb" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
+                  {% endif %}
                   <h3 class="post-card-title">{{ post.title }}</h3>
                   <p class="post-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
                 </a>
