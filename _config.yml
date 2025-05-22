@@ -1,0 +1,8 @@
+title: "New Dawn Devlog"
+description: "Chronicles of the reborn Clanwar server"
+baseurl: "/newdawn-devlog"
+url: "https://ftw-shokz.github.io"
+theme: minima
+
+include:
+  - assets
