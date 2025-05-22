@@ -1,14 +1,26 @@
 title: "New Dawn Devlog"
-description: "Chronicles of the reborn Clanwar server"
-baseurl: "/newdawn-devlog"
-url: "https://ftw-shokz.github.io"
+description: "Chronicles of the reborn Clanwar Server"
+baseurl: "/newdawn-devlog"  # This is the name of your repo
+url: "https://ftw-shokz.github.io"  # Don't include trailing slash
 theme: minima
 
+# Make sure GitHub Pages includes the assets folder
 include:
   - assets
 
-  defaults:
+# Optional: Customize Markdown rendering
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins (Jekyll SEO is already enabled via minima)
+plugins:
+  - jekyll-seo-tag
+
+# Use your custom layout (auto-detected if file exists)
+defaults:
   - scope:
       path: ""
     values:
-      css: "/newdawn-devlog/assets/css/custom.css"
+      layout: default
