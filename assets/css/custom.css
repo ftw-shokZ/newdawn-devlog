@@ -133,10 +133,6 @@ img {
   color: #22a5dd;
 }
 
-img.enlargeable {
-  cursor: pointer;
-}
-
 .read-more a {
   color: #22a5dd;
   text-decoration: none;

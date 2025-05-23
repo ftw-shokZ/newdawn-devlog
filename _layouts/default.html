@@ -39,12 +39,12 @@
                   <h3 class="post-card-title">{{ post.title }}</h3>
                   <p class="post-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
                   {% if post.tags %}
-                  <div class="post-tags">
-                    {% for tag in post.tags %}
-                      <span class="tag">{{ tag }}</span>
-                    {% endfor %}
-                  </div>
-                {% endif %}                  
+                    <div class="post-tags">
+                      {% for tag in post.tags %}
+                        <span class="tag">{{ tag }}</span>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
                   <p class="read-more"><a href="{{ post.url | relative_url }}">Read more →</a></p>
                 </a>
               </div>
@@ -68,14 +68,6 @@
         const modalImg = document.getElementById("imgPreview");
         const closeBtn = document.querySelector(".img-close");
 
-        // Only target images with class 'enlargeable' in post content
-        document.querySelectorAll(".page-content img.enlargeable").forEach(img => {
-          img.addEventListener("click", () => {
-            modal.style.display = "flex";
-            modalImg.src = img.src;
-          });
-        });
-
         const closeModal = () => {
           modal.style.display = "none";
           modalImg.src = "";
@@ -89,6 +81,17 @@
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape") closeModal();
         });
+
+        // Select images inside .page-content .wrapper, skip thumbnails
+        document.querySelectorAll(".page-content .wrapper img").forEach(img => {
+          if (!img.classList.contains("post-thumb")) {
+            img.style.cursor = "pointer";
+            img.addEventListener("click", () => {
+              modal.style.display = "flex";
+              modalImg.src = img.src;
+            });
+          }
+        });
       });
     </script>
 
@@ -100,6 +103,10 @@
           <a href="https://discord.gg/new-dawn" target="_blank" class="footer-icon">
             <img src="{{ site.baseurl }}/assets/icons/discord.svg" alt="Discord" />
           </a>
+          <!-- Optional GitHub Icon -->
+          <!-- <a href="https://github.com/ftw-shokz" target="_blank" class="footer-icon">
+            <img src="{{ site.baseurl }}/assets/icons/github.svg" alt="GitHub" />
+          </a> -->
         </div>
       </div>
     </footer>
