@@ -29,16 +29,10 @@ a:hover {
   color: #bbbbbb;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
   color: #ffffff;
   border-bottom: 1px solid #333333;
   padding-bottom: 4px;
-}
-
-h3, h4 {
-  color: #ffffff;
-  border: none;
-  padding-bottom: 0;
 }
 
 code, pre {
@@ -55,7 +49,7 @@ img {
   box-shadow: 0 0 10px rgba(34, 165, 221, 0.4);
   margin-top: 1em;
   margin-bottom: 1em;
-  cursor: pointer;
+  cursor: pointer; /* <-- Add this */
 }
 
 .post-cards {
@@ -89,7 +83,6 @@ img {
   font-size: 1.2rem;
   color: #22a5dd;
   margin-bottom: 0.5em;
-  border-bottom: none;
 }
 
 .post-card-date {
@@ -180,4 +173,14 @@ img {
 .footer-icon img:hover {
   transform: scale(1.1);
   filter: brightness(0) invert(0.6) drop-shadow(0 0 3px #22a5dd);
+}
+
+.post-card-title a {
+  text-decoration: none;
+  color: #22a5dd;
+}
+
+.post-card-title a:hover {
+  color: #40cfff;
+  text-decoration: none; /* <-- This removes the blue underline */
 }
