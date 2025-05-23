@@ -59,7 +59,7 @@
         const modal = document.getElementById("imgModal");
         const modalImg = document.getElementById("imgPreview");
         const closeBtn = document.querySelector(".img-close");
-
+    
         document.querySelectorAll("img").forEach(img => {
           img.style.cursor = "zoom-in";
           img.addEventListener("click", () => {
@@ -67,18 +67,25 @@
             modalImg.src = img.src;
           });
         });
-
-        closeBtn.addEventListener("click", () => {
+    
+        const closeModal = () => {
           modal.style.display = "none";
-        });
-
+          modalImg.src = "";
+        };
+    
+        closeBtn.addEventListener("click", closeModal);
+    
+        modalImg.addEventListener("click", closeModal);
+    
         modal.addEventListener("click", (e) => {
-          if (e.target === modal) {
-            modal.style.display = "none";
-          }
+          if (e.target === modal) closeModal();
+        });
+    
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeModal();
         });
       });
-    </script>    
+    </script>  
 
     <footer class="site-footer">
       <div class="wrapper">
