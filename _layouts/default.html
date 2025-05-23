@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     {% seo %}
 
     <link rel="icon" href="{{ "/favicon.ico" | relative_url }}">
@@ -27,6 +26,7 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
+
         {% if page.url == "/" %}
           <h2 class="post-list-heading">Posts</h2>
           <div class="post-cards">
@@ -35,7 +35,7 @@
                 {% if post.thumbnail %}
                   <img class="post-thumb" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
                 {% endif %}
-                
+
                 <h3 class="post-card-title">
                   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h3>
@@ -54,9 +54,16 @@
               </div>
             {% endfor %}
           </div>
+
         {% else %}
+          {% if page.thumbnail %}
+            <div class="post-banner">
+              <img src="{{ page.thumbnail }}" alt="Banner for {{ page.title }}">
+            </div>
+          {% endif %}
           {{ content }}
         {% endif %}
+
       </div>
     </main>
 
@@ -86,7 +93,6 @@
           if (e.key === "Escape") closeModal();
         });
 
-        // Select images inside .page-content .wrapper, skip thumbnails
         document.querySelectorAll(".page-content .wrapper img").forEach(img => {
           if (!img.classList.contains("post-thumb")) {
             img.style.cursor = "pointer";
@@ -107,10 +113,6 @@
           <a href="https://discord.gg/new-dawn" target="_blank" class="footer-icon">
             <img src="{{ site.baseurl }}/assets/icons/discord.svg" alt="Discord" />
           </a>
-          <!-- Optional GitHub Icon -->
-          <!-- <a href="https://github.com/ftw-shokz" target="_blank" class="footer-icon">
-            <img src="{{ site.baseurl }}/assets/icons/github.svg" alt="GitHub" />
-          </a> -->
         </div>
       </div>
     </footer>
