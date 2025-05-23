@@ -132,3 +132,7 @@ img {
 .img-close:hover {
   color: #22a5dd;
 }
+
+img.enlargeable {
+  cursor: pointer;
+}

@@ -5,23 +5,23 @@
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Jekyll SEO -->
     {% seo %}
 
-    <!-- Favicon (optional) -->
     <link rel="icon" href="{{ "/favicon.ico" | relative_url }}">
-
-    <!-- Minima core styles -->
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-
-    <!-- Your custom styles -->
     <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="wrapper">
+    <header class="site-header sticky-nav">
+      <div class="wrapper nav-wrapper">
         <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <nav class="site-nav">
+          <a href="{{ site.baseurl }}/" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Tags</a>
+          <a href="{{ site.baseurl }}/about" class="nav-link">About</a>
+          <a href="mailto:you@example.com" class="nav-link">Contact</a>
+        </nav>
       </div>
     </header>
 
@@ -34,7 +34,7 @@
               <div class="post-card">
                 <a class="post-card-link" href="{{ post.url | relative_url }}">
                   {% if post.thumbnail %}
-                  <img class="post-thumb" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
+                    <img class="post-thumb" src="{{ post.thumbnail }}" alt="Thumbnail for {{ post.title }}">
                   {% endif %}
                   <h3 class="post-card-title">{{ post.title }}</h3>
                   <p class="post-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
@@ -42,13 +42,13 @@
               </div>
             {% endfor %}
           </div>
-          
         {% else %}
           {{ content }}
         {% endif %}
       </div>
     </main>
-    <!-- Image Modal -->
+
+    <!-- Image Modal Viewer -->
     <div id="imgModal" class="img-modal">
       <span class="img-close">&times;</span>
       <img class="img-modal-content" id="imgPreview">
@@ -59,33 +59,30 @@
         const modal = document.getElementById("imgModal");
         const modalImg = document.getElementById("imgPreview");
         const closeBtn = document.querySelector(".img-close");
-    
-        document.querySelectorAll("img").forEach(img => {
-          img.style.cursor = "zoom-in";
+
+        // Only target images with class 'enlargeable' in post content
+        document.querySelectorAll(".page-content img.enlargeable").forEach(img => {
           img.addEventListener("click", () => {
             modal.style.display = "flex";
             modalImg.src = img.src;
           });
         });
-    
+
         const closeModal = () => {
           modal.style.display = "none";
           modalImg.src = "";
         };
-    
+
         closeBtn.addEventListener("click", closeModal);
-    
         modalImg.addEventListener("click", closeModal);
-    
         modal.addEventListener("click", (e) => {
           if (e.target === modal) closeModal();
         });
-    
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape") closeModal();
         });
       });
-    </script>  
+    </script>
 
     <footer class="site-footer">
       <div class="wrapper">
