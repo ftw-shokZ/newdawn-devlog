@@ -188,3 +188,23 @@ img {
   transform: scale(1.1);
   filter: brightness(0) invert(0.6) drop-shadow(0 0 3px #22a5dd);
 }
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.site-title,
+.site-title:visited,
+.site-title:active,
+.site-title:focus {
+  color: #22a5dd;
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.site-title:hover {
+  color: #40cfff;
+  text-decoration: none !important;
+}
