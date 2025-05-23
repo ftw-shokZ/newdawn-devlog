@@ -176,11 +176,12 @@ img {
 }
 
 .post-card-title a {
-  text-decoration: none;
+  all: unset;
   color: #22a5dd;
+  font-weight: bold;
+  display: inline-block;
 }
 
 .post-card-title a:hover {
   color: #40cfff;
-  text-decoration: none; /* <-- This removes the blue underline */
 }
