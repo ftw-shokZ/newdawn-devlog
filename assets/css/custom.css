@@ -136,3 +136,45 @@ img {
 img.enlargeable {
   cursor: pointer;
 }
+
+.read-more a {
+  color: #22a5dd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more a:hover {
+  color: #40cfff;
+}
+
+.post-tags {
+  margin-top: 8px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #2a2d30;
+  color: #22a5dd;
+  padding: 2px 10px;
+  margin: 2px 4px 0 0;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-icon img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.footer-icon img:hover {
+  transform: scale(1.1);
+  filter: brightness(0) invert(0.6) drop-shadow(0 0 3px #22a5dd);
+}
